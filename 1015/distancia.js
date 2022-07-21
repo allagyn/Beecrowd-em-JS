@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('./arquivo.txt', 'utf8')
+var entradas = input.split('\n')
+var [a, b] = entradas[0].split(" ")
+var [c, d] = entradas[1].split(" ")
+/* Transformando String para Float*/
+var x1 = parseFloat(a)
+var y1 = parseFloat(b)
+var x2 = parseFloat(c)
+var y2 = parseFloat(d)
+var produto = Math.pow(x2 - x1,2) + Math.pow(y2 - y1,2)
+var distancia = Math.sqrt(produto)
+console.log(distancia.toFixed(4))
